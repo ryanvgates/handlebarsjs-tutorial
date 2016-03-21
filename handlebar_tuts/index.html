@@ -7,11 +7,20 @@
 		The List of Shoes:
 		<ul class="shoesNav">
 			<script type="x-handlebars-template" id="shoe-template">
-				{{#each this}}
-				<li class="shoes"><a href="/{{name}}">{{name}} -- Price: {{price}} </a></li>
+				{{#each allShoes}}
+				<li class="shoes">
+					<span class="shoe-name">{{name}} - </span> Price: {{price}} 
+					{{>description}}
+				</li>
 				{{/each}}
 			</script>
-		</ul>
-		<script type="text/javascript" src="main.js"></script>
-	</body>
-	</html>
+			<script id="shoe-description" type="x-handlebars-template">
+				<ul>
+				<li>{{color}}</li>
+				<li>{{size}}</li>
+				</ul>
+				</script>
+			</ul>
+			<script type="text/javascript" src="main.js"></script>
+		</body>
+		</html>
