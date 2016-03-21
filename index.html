@@ -1,10 +1,21 @@
 <html>
-	<head>
+<head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-	</head>
-	<body>
+
+</head>
+<body>
+	<script id="header" type="text/x-handlebars-template">
 		<div>
-			Name: {{ customerName }}
+			Title: {{ headerTitle }}
 		</div>
-	</body>
+		Today is {{weekDay}}
+		<div>
+			{{#customers}}
+			<li> {{ firstName }} {{ lastName }} </li>
+			{{/customers}}
+		</div>
+	</script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
 </html>
