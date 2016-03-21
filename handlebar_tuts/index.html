@@ -1,10 +1,17 @@
 	<html>
 	<head>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	</head>
 	<body>
 		The List of Shoes:
-		<ul class="shoesNav"></ul>
+		<ul class="shoesNav">
+			<script type="x-handlebars-template" id="shoe-template">
+				{{#each this}}
+				<li class="shoes"><a href="/{{name}}">{{name}} -- Price: {{price}} </a></li>
+				{{/each}}
+			</script>
+		</ul>
 		<script type="text/javascript" src="main.js"></script>
 	</body>
 	</html>
